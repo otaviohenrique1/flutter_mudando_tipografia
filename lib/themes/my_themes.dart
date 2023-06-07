@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 
 ThemeData myTheme = ThemeData(
-  primaryColor: Colors.blueGrey,
-  // primarySwatch: Colors.blueGrey,
+  primaryColor: Colors.pink,
+  // primarySwatch: Colors.pink,
   colorScheme: ColorScheme.fromSwatch(
-    primarySwatch: Colors.blueGrey,
-    // accentColor: Colors.blueGrey,
+    primarySwatch: Colors.pink,
+    // accentColor: Colors.pink,
   ).copyWith(
-    secondary: Colors.blueGrey[200],
-    surface: Colors.blueGrey[100],
+    secondary: Colors.pink[200],
+    surface: Colors.pink[100],
+  ),
+  textTheme: const TextTheme(
+    displaySmall: TextStyle(
+      color: Colors.black,
+      fontSize: 24,
+      overflow: TextOverflow.ellipsis,
+    ),
+  ),
+  primaryTextTheme: const TextTheme(
+    labelLarge: TextStyle(
+      fontSize: 16,
+    ),
   ),
 );

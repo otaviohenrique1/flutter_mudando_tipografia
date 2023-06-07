@@ -68,8 +68,7 @@ class _TaskState extends State<Task> {
                           width: 200,
                           child: Text(
                             widget.nome,
-                            style: const TextStyle(
-                                fontSize: 24, overflow: TextOverflow.ellipsis),
+                            style: Theme.of(context).textTheme.displaySmall,
                           ),
                         ),
                         Difficulty(dificultyLevel: widget.dificuldade),
@@ -85,15 +84,15 @@ class _TaskState extends State<Task> {
                             });
                             // print(nivel);
                           },
-                          child: const Column(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Icon(Icons.arrow_drop_up),
+                              const Icon(Icons.arrow_drop_up),
                               Text(
                                 "UP",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
+                                style: Theme.of(context)
+                                    .primaryTextTheme
+                                    .labelMedium,
                               ),
                             ],
                           )),
@@ -120,9 +119,7 @@ class _TaskState extends State<Task> {
                     padding: const EdgeInsets.all(12),
                     child: Text(
                       "Nivel $nivel",
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.onPrimaryContainer,
-                      ),
+                      style: Theme.of(context).primaryTextTheme.labelLarge,
                     ),
                   ),
                 ],
